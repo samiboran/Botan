@@ -25,7 +25,10 @@ export class ResultScene extends Phaser.Scene {
   }
 
   create(): void {
-    const { outcome } = this.resultData;
+    const { attempt, outcome } = this.resultData;
+
+    // eslint-disable-next-line no-console
+    console.log('[DragonKick] shot', { power: attempt.power, curve: attempt.curve, height: attempt.height, outcome });
 
     this.add.rectangle(0, 0, GAME_WIDTH, GAME_HEIGHT, 0x0d2b12).setOrigin(0);
     this.add.image(GAME_WIDTH / 2, 140, 'goalpost').setScale(1.4, 1.3);
@@ -35,7 +38,9 @@ export class ResultScene extends Phaser.Scene {
 
     if (outcome.special) this.showSpecialBanner(outcome);
 
-    const side = Math.random() < 0.5 ? -1 : 1;
+    // attempt.curve.value < 0.5 means the timing marker was locked left of
+    // center (see ShotResolver.computeCurveStat) — the ball must go that way.
+    const side = attempt.curve.value < 0.5 ? -1 : 1;
     const targetX = GAME_WIDTH / 2 + side * (40 + (outcome.curveStat / 100) * 100);
     const targetY = 140 - (outcome.heightValue - 0.5) * 60;
     const midX = (ball.x + targetX) / 2 + side * (outcome.curveStat / 100) * 60;
