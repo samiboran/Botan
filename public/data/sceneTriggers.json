@@ -1,0 +1,40 @@
+{
+  "thresholds": {
+    "power_fire": 85,
+    "curve_world_loop": 80,
+    "power_weak": 25,
+    "power_slow": 35
+  },
+  "scenes": {
+    "fire_ball_scene": {
+      "label": "ALEV TOPU!",
+      "description": "Top çok hızlı — yanan top sinematiği.",
+      "forces_goal": true,
+      "bonus_points": 0
+    },
+    "world_loop_scene": {
+      "label": "DÜNYA TURU!",
+      "description": "Top çok falsolu — dünya etrafından dönüp gelir.",
+      "forces_goal": true,
+      "bonus_points": 0
+    },
+    "weak_miss_scene": {
+      "label": "ISKALADI",
+      "description": "Zayıf/beceriksiz vuruş — top kaleyi ıskalar.",
+      "forces_goal": false,
+      "bonus_points": 0
+    },
+    "crowd_catch_scene": {
+      "label": "SEYİRCİ YAKALADI!",
+      "description": "Yavaş ama yüksek vuruş — top tribüne gider, bir seyirci yakalar.",
+      "forces_goal": false,
+      "bonus_points": 0
+    },
+    "crowd_hit_ambulance_scene": {
+      "label": "AY VAY BE!",
+      "description": "Top dışarı/seyirciye çarpar — ambulans sahnesi, bonus puan.",
+      "forces_goal": false,
+      "bonus_points": 50
+    }
+  }
+}

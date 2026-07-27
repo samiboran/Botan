@@ -1,0 +1,56 @@
+[
+  {
+    "goalkeeper_id": "tur_keeper_01",
+    "country": "TUR",
+    "base_difficulty": 2,
+    "weaknesses": ["low_power_shots"],
+    "strengths": [],
+    "reaction_time_ms": 480,
+    "dive_range": "short"
+  },
+  {
+    "goalkeeper_id": "esp_keeper_01",
+    "country": "ESP",
+    "base_difficulty": 4,
+    "weaknesses": ["heavy_curve"],
+    "strengths": ["low_power_shots"],
+    "reaction_time_ms": 380,
+    "dive_range": "medium"
+  },
+  {
+    "goalkeeper_id": "eng_keeper_01",
+    "country": "ENG",
+    "base_difficulty": 5,
+    "weaknesses": ["high_placement"],
+    "strengths": ["heavy_power"],
+    "reaction_time_ms": 360,
+    "dive_range": "medium"
+  },
+  {
+    "goalkeeper_id": "ita_keeper_01",
+    "country": "ITA",
+    "base_difficulty": 6,
+    "weaknesses": [],
+    "strengths": ["heavy_curve", "low_power_shots"],
+    "reaction_time_ms": 340,
+    "dive_range": "wide"
+  },
+  {
+    "goalkeeper_id": "ger_keeper_01",
+    "country": "GER",
+    "base_difficulty": 7,
+    "weaknesses": ["heavy_curve"],
+    "strengths": ["heavy_power"],
+    "reaction_time_ms": 320,
+    "dive_range": "wide"
+  },
+  {
+    "goalkeeper_id": "fra_keeper_01",
+    "country": "FRA",
+    "base_difficulty": 8,
+    "weaknesses": ["high_placement"],
+    "strengths": ["heavy_power", "heavy_curve"],
+    "reaction_time_ms": 300,
+    "dive_range": "wide"
+  }
+]

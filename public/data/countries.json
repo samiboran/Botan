@@ -1,0 +1,8 @@
+[
+  { "id": "TUR", "label": "Türkiye", "unlock_level": 1, "keeper_id": "tur_keeper_01" },
+  { "id": "ESP", "label": "İspanya", "unlock_level": 3, "keeper_id": "esp_keeper_01" },
+  { "id": "ENG", "label": "İngiltere", "unlock_level": 6, "keeper_id": "eng_keeper_01" },
+  { "id": "ITA", "label": "İtalya", "unlock_level": 9, "keeper_id": "ita_keeper_01" },
+  { "id": "GER", "label": "Almanya", "unlock_level": 12, "keeper_id": "ger_keeper_01" },
+  { "id": "FRA", "label": "Fransa", "unlock_level": 15, "keeper_id": "fra_keeper_01" }
+]
