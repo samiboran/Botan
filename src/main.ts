@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { GAME_WIDTH, GAME_HEIGHT } from './config';
 import { BootScene } from './scenes/BootScene';
+import { MainMenuScene } from './scenes/MainMenuScene';
 import { MapScene } from './scenes/MapScene';
 import { PrepareScene } from './scenes/PrepareScene';
 import { ShotScene } from './scenes/ShotScene';
@@ -17,5 +18,5 @@ new Phaser.Game({
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
-  scene: [BootScene, MapScene, PrepareScene, ShotScene, ResultScene],
+  scene: [BootScene, MainMenuScene, MapScene, PrepareScene, ShotScene, ResultScene],
 });

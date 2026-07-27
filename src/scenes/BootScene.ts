@@ -15,6 +15,6 @@ export class BootScene extends Phaser.Scene {
 
   create(): void {
     generatePlaceholderTextures(this);
-    this.scene.start('Map');
+    this.scene.start('MainMenu');
   }
 }
