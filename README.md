@@ -55,8 +55,18 @@ Kimi'nin üstleneceği kısımlar (bölüm 10):
   (şu an `ResultScene.showSpecialBanner` sadece metin banner'ı gösteriyor)
 - Kaleci AI davranış detaylarının zenginleştirilmesi (`ShotResolver.keeperSaveProbability`)
 
+## Bu repodaki diğer proje: Platform Football
+
+`platform-football/` altında ayrı, ilgisiz bir oyun daha var (1v1 arcade futbol,
+kendi `package.json`/`src`/`CLAUDE.md`'si ile bağımsız bir Vite projesi). Ayrı
+repo olarak açılmak istendi ama bu oturumun GitHub App'inin repo oluşturma
+yetkisi olmadığından Botan'ın altına taşındı. Detaylar için
+`platform-football/CLAUDE.md` ve `platform-football/docs/`.
+
 ## GitHub Pages Deploy
 
-`.github/workflows/deploy.yml`, `main` branch'ine push'ta otomatik build+deploy yapar
-(`vite build` → GitHub Pages). `vite.config.ts` içindeki `base: '/Botan/'` repo adıyla
-senkron tutulmalı.
+`.github/workflows/deploy.yml`, `claude/dragonkick-game-design-tjo3lc` branch'ine
+push'ta **her iki projeyi de** build edip tek bir Pages sitesinde birleştirir:
+DragonKick kökte (`/Botan/`), Platform Football kendi alt yolunda
+(`/Botan/platform-football/`). Her iki projenin `vite.config.ts`'indeki `base`
+ayarı bu yollarla senkron tutulmalı, yoksa Pages'te boş sayfa gelir.
