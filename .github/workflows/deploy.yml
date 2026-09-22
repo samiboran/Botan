@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy DragonKick to GitHub Pages
 
 on:
   push:
@@ -22,33 +22,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      # DragonKick — repo root, served at /Botan/
-      - name: Build DragonKick
-        run: |
-          npm ci
-          npm run build
-
-      # Platform Football — subfolder, served at /Botan/platform-football/
-      - name: Build Platform Football
-        working-directory: platform-football
-        run: |
-          npm ci
-          npm run build
-
-      # Combine both builds into one Pages artifact. DragonKick's dist is
-      # the site root; Platform Football's dist nests under its own path
-      # so the two apps never overwrite each other's files.
-      - name: Combine builds
-        run: |
-          mkdir -p combined
-          cp -r dist/. combined/
-          mkdir -p combined/platform-football
-          cp -r platform-football/dist/. combined/platform-football/
-
+          cache: npm
+      - run: npm ci
+      - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: combined
+          path: dist
 
   deploy:
     needs: build
